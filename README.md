@@ -1,6 +1,7 @@
 
 # KILO.Push
-###### Communicate with me!
+
+![](https://github.com/artlevitan/KILO.Push-API/editor/images/logos/logo.png)
 
 KILO.Push is a free platform for sending and receiving messages with push notifications to your phone or tablet from a variety of sources. From the server side, we provide an HTTP API for delivering messages to devices that are addressed using tokens. Mobile app based on iOS and Android receives these push messages and shows them to the user.
 
