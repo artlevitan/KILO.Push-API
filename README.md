@@ -87,4 +87,4 @@ POST an HTTPS request to https://push.kilo.chat/v1/messages/send with the follow
 - for HTML Form `Content-Type: application/x-www-form-urlencoded`
 
 ## Examples
-See [examples](https://github.com/artlevitan/KILO.Push-API/tree/main/examples "examples") in different programming languages.
+See [examples](https://github.com/artlevitan/KILO.Push-API/tree/main/examples "examples") in popular programming languages.
