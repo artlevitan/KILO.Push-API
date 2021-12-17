@@ -14,11 +14,11 @@ Programmers can easily integrate sending messages to KILO.Push from your service
 KILO.Push is perfect for sending news and promotions, security alerts, IoT notifications and smart home automation.
 
 ## Scope of application
-- News and promotions;
-- Security alerts (two-factor authentication, alarm, etc.);
-- IoT notifications and smart home automation;
-- Anonymous prize draws;
-- Complete replacement of paid SMS;
+- News and promotions.
+- Security alerts (two-factor authentication, alarm, etc.).
+- IoT notifications and smart home automation.
+- Anonymous prize draws.
+- Complete replacement of paid SMS.
 - And much more…
 
 ## Get started
@@ -85,3 +85,6 @@ POST an HTTPS request to https://push.kilo.chat/v1/messages/send with the follow
 ### HTTP Request Headers:
 - for JSON `Content-Type: application/json`
 - for HTML Form `Content-Type: application/x-www-form-urlencoded`
+
+## Examples
+See [examples](https://github.com/artlevitan/KILO.Push-API/tree/main/examples "examples") in different programming languages.
