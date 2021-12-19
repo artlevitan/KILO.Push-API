@@ -90,14 +90,16 @@ POST an HTTPS request to https://push.kilo.chat/v1/messages/send with the follow
 #### 200 OK
 Successful request. The message has been sent.
 
-`{
+```json
+{
     "response": {
         "status": 200
     }
-}`
+}
+```
 
 #### 400 Bad request
-The message could not be sent for any reason:
+The message could not be sent for any reason (`response->status`):
 - **4000** Invalid request headers.
 - **4003** Forbidden: restricted access rights or actions with the object.
 - **4005** Invalid or forbidden values passed.
@@ -105,12 +107,14 @@ The message could not be sent for any reason:
 - **4024** The user added the channel to the blacklist.
 - **4029** Exceeded the daily limit for sending messages.
 
-`{
+```json
+{
     "response": {
         "status": 4000,
         "message": "Invalid request headers."
     }
-}`
+}
+```
 
 #### 500 Internal Server Error
 Internal server error please try again later.
