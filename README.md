@@ -1,7 +1,7 @@
 
 # KILO.Push
 
-![](https://github.com/artlevitan/KILO.Push-API/blob/main/editor/images/logos/logo.png?raw=true)
+<img src="editor/images/logos/logo.png" alt="KILO.Push" style="max-width: 100%;">
 
 KILO.Push is a free platform for sending and receiving messages with push notifications to your phone or tablet from a variety of sources. From the server side, we provide an HTTP API for delivering messages to devices that are addressed using tokens. Mobile app based on iOS and Android receives these push messages and shows them to the user.
 
@@ -71,7 +71,7 @@ The app imposes certain restrictions in order to use resources efficiently, moni
 - Verified channels have no restrictions on the number of messages sent.
 
 ## Sending messages
-POST an HTTPS request to https://push.kilo.chat/v1/messages/send with the following parameters:
+**POST** an HTTPS request to https://push.kilo.chat/v1/messages/send with the following parameters:
 
 | Key | Required | Type | Decription |
 |--|--|--|--|
