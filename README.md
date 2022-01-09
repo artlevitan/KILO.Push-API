@@ -1,10 +1,12 @@
 # KILO.Push
 
-<img src="/editor/images/logos/logo.png" alt="KILO.Push" style="max-width:100%">
+<img src="/editor/images/logos/logo.png" alt="KILO.Push" align="center" style="max-width:100%">
 
 <div align="center">
+    
 [![App Store](/editor/images/download/appstore.png)](https://apps.apple.com/us/app/kilo-push/id1512247485)
 [![Google Play](/editor/images/download/googleplay.png)](https://play.google.com/store/apps/details?id=chat.kilo)
+    
 </div>
 
 KILO.Push is a free platform for sending and receiving messages with push notifications to your phone or tablet from a variety of sources. From the server side, we provide an HTTP API for delivering messages to devices that are addressed using tokens. Mobile app based on iOS and Android receives these push messages and shows them to the user.
@@ -15,7 +17,8 @@ KILO.Push is a free platform for sending and receiving messages with push notifi
 
 Programmers can easily integrate sending messages to KILO.Push from your services, IoT, feedback forms, or anything else that uses our API.
 
-## Scope of application
+## Scope of application![image](https://user-images.githubusercontent.com/24976896/148699347-d25e184a-e256-4b64-81bc-12677a428314.png)
+
 
 - News and promotions.
 - Security alerts (two-factor authentication, alarm, etc.).
