@@ -1,10 +1,11 @@
-
 # KILO.Push
 
-<img src="editor/images/logos/logo.png" alt="KILO.Push" style="max-width:100%">
+<img src="/editor/images/logos/logo.png" alt="KILO.Push" style="max-width:100%">
 
-[![App Store](editor/images/download/appstore.png)](https://apps.apple.com/us/app/kilo-push/id1512247485)
-[![Google Play](editor/images/download/googleplay.png)](https://play.google.com/store/apps/details?id=chat.kilo)
+<div align="center">
+[![App Store](/editor/images/download/appstore.png)](https://apps.apple.com/us/app/kilo-push/id1512247485)
+[![Google Play](/editor/images/download/googleplay.png)](https://play.google.com/store/apps/details?id=chat.kilo)
+</div>
 
 KILO.Push is a free platform for sending and receiving messages with push notifications to your phone or tablet from a variety of sources. From the server side, we provide an HTTP API for delivering messages to devices that are addressed using tokens. Mobile app based on iOS and Android receives these push messages and shows them to the user.
 
@@ -15,6 +16,7 @@ KILO.Push is a free platform for sending and receiving messages with push notifi
 Programmers can easily integrate sending messages to KILO.Push from your services, IoT, feedback forms, or anything else that uses our API.
 
 ## Scope of application
+
 - News and promotions.
 - Security alerts (two-factor authentication, alarm, etc.).
 - IoT notifications and smart home automation.
@@ -23,9 +25,11 @@ Programmers can easily integrate sending messages to KILO.Push from your service
 - And much more…
 
 ## Get started
+
 Programmers can easily integrate sending messages to KILO.Push from your services, IoT, feedback forms, or anything else that uses our API. See [examples](https://github.com/artlevitan/KILO.Push-API/tree/main/examples "examples") in popular programming languages.
 
 ### Users
+
 <details>
 <summary>Click to expand for more information</summary>
 When you first launch the mobile app, you will be assigned a unique **User Token**, which is an identifier, like a personal phone number or email address.
@@ -37,11 +41,11 @@ The **User Token** consists of random letters and numbers of the English alphabe
 User Token is used to receive messages. Do not share your Token with third parties without the necessity, this may cause you to receive unwanted messages, and then you will have to add such channels to the blacklist.
 
 > If you reinstall the app, you will receive a new User Token — you will not be able to restore the old Token.
-
 > Each user receives a unique Token. If you know the user's personal Token, you can send messages to them.
 </details>
 
 ### Channels
+
 <details>
 <summary>Click to expand for more information</summary>
 You need to create a channel to send messages to yourself or other users.
@@ -61,16 +65,17 @@ You can find the Channel Token and Channel Secret Key in My channels section.
 Do not share your Channel's Token and Secret Key with anyone, otherwise attackers will be able to send messages without your knowledge.
 
 > If your channel data has been compromised, update your Secret Key immediately so that attackers can't send messages. The Channel Secret Key can be updated at any time.
-
 > Create channels for sending messages. Do not share your Channel's Token and Secret Key with third parties. If data is compromised, update the Channel Secret Key.
 
 #### Blocked channels
+
 Annoying channels can be added to the blacklist to avoid receiving messages from them. To do this, select notification in the mobile app and click Block channel. Manage blocked channels in the auxiliary menu of the mobile app.
 
 > Messages from blocked channels won't disturb you anymore.
 </details>
 
 ### Limitations
+
 <details>
 <summary>Click to expand for more information</summary>
 The app imposes certain restrictions in order to use resources efficiently, monitor security, and control spam.
@@ -81,23 +86,27 @@ The app imposes certain restrictions in order to use resources efficiently, moni
 </details>
 
 ## Sending messages
-**POST** an HTTPS request to https://push.kilo.chat/v1/messages/send with the following parameters:
 
-| Key | Required | Type | Decription |
-|--|--|--|--|
-| to | yes | string | Recipient: User Token |
-| token | yes | string | Sender: Channel Token |
-| secret | yes | string | Sender: Channel Secret Key |
-| message | yes | string | Your message |
-| url | no | string | Hyperlink (http:// or https://) |
-| important | no | string | Add push notification: 0 - no, 1 - yes |
+**POST** an HTTPS request to <https://push.kilo.chat/v1/messages/send> with the following parameters:
 
-### HTTP Request Headers:
+| Key       | Required | Type   | Decription                             |
+| --------- | -------- | ------ | -------------------------------------- |
+| to        | yes      | string | Recipient: User Token                  |
+| token     | yes      | string | Sender: Channel Token                  |
+| secret    | yes      | string | Sender: Channel Secret Key             |
+| message   | yes      | string | Your message                           |
+| url       | no       | string | Hyperlink (http:// or https://)        |
+| important | no       | string | Add push notification: 0 - no, 1 - yes |
+
+### HTTP Request Headers
+
 - for JSON `Content-Type: application/json`
 - for HTML Form `Content-Type: application/x-www-form-urlencoded`
 
 ## Responses
+
 #### 200 OK
+
 Successful request. The message has been sent.
 
 ```json
@@ -109,7 +118,9 @@ Successful request. The message has been sent.
 ```
 
 #### 400 Bad request
+
 The message could not be sent for any reason `response->status`:
+
 - **4000** Invalid request headers.
 - **4003** Forbidden: restricted access rights or actions with the object.
 - **4005** Invalid or forbidden values passed.
@@ -127,4 +138,5 @@ The message could not be sent for any reason `response->status`:
 ```
 
 #### 500 Internal Server Error
+
 Internal server error please try again later.
