@@ -17,8 +17,7 @@ KILO.Push is a free platform for sending and receiving messages with push notifi
 
 Programmers can easily integrate sending messages to KILO.Push from your services, IoT, feedback forms, or anything else that uses our API.
 
-## Scope of application![image](https://user-images.githubusercontent.com/24976896/148699347-d25e184a-e256-4b64-81bc-12677a428314.png)
-
+## Scope of application!
 
 - News and promotions.
 - Security alerts (two-factor authentication, alarm, etc.).
