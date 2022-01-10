@@ -3,10 +3,10 @@
 <img src="/editor/images/logos/logo.png" alt="KILO.Push" align="center" style="max-width:100%">
 
 <div align="center">
-    
+
 [![App Store](/editor/images/download/appstore.png)](https://apps.apple.com/us/app/kilo-push/id1512247485)
 [![Google Play](/editor/images/download/googleplay.png)](https://play.google.com/store/apps/details?id=chat.kilo)
-    
+
 </div>
 
 KILO.Push is a free platform for sending and receiving messages with push notifications to your phone or tablet from a variety of sources. From the server side, we provide an HTTP API for delivering messages to devices that are addressed using tokens. Mobile app based on iOS and Android receives these push messages and shows them to the user.
@@ -17,7 +17,7 @@ KILO.Push is a free platform for sending and receiving messages with push notifi
 
 Programmers can easily integrate sending messages to KILO.Push from your services, IoT, feedback forms, or anything else that uses our API.
 
-## Scope of application!
+## Scope of application
 
 - News and promotions.
 - Security alerts (two-factor authentication, alarm, etc.).
@@ -34,6 +34,7 @@ Programmers can easily integrate sending messages to KILO.Push from your service
 
 <details>
 <summary>Click to expand for more information</summary>
+
 When you first launch the mobile app, you will be assigned a unique **User Token**, which is an identifier, like a personal phone number or email address.
 
 The **User Token** consists of random letters and numbers of the English alphabet with a length of 42 characters. Starts with the prefix `u_`, for example:
@@ -50,6 +51,7 @@ User Token is used to receive messages. Do not share your Token with third parti
 
 <details>
 <summary>Click to expand for more information</summary>
+
 You need to create a channel to send messages to yourself or other users.
 
 Each channel has a name, a logo, a unique **Channel Token**, and a **Channel Secret Key**.
@@ -80,11 +82,14 @@ Annoying channels can be added to the blacklist to avoid receiving messages from
 
 <details>
 <summary>Click to expand for more information</summary>
+
 The app imposes certain restrictions in order to use resources efficiently, monitor security, and control spam.
+
 - Notification text and links no more than 1000 characters;
 - Maximum 5 channels per user;
 - Sending no more than 300 messages per day from each channel;
 - Verified channels have no restrictions on the number of messages sent.
+
 </details>
 
 ## Sending messages
