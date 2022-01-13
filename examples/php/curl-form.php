@@ -2,6 +2,7 @@
 
 /**
  * PHP - cURL
+ * form-data
  * https://github.com/artlevitan/KILO.Push-API
  */
 
@@ -17,13 +18,12 @@ $fields = http_build_query($request_body);
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, 'https://push.kilo.chat/v1/messages/send');
 curl_setopt($ch, CURLOPT_POST, true);
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_POSTFIELDS, $fields);
-curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); // It is recommended to remove it in production development if you use SSL
+curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0); // It is recommended to remove it in production development if you use SSL
 curl_setopt($ch, CURLOPT_TIMEOUT, 5);
 $response = curl_exec($ch);
-
 curl_close($ch);
 
 echo $response;
