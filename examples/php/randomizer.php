@@ -47,8 +47,8 @@ foreach ($selectedRecipients as $selectedRecipient) {
     curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type:application/json']);
     curl_setopt($ch, CURLOPT_POSTFIELDS, $fields);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); // It is recommended to remove it in production development if you use SSL
-    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0); // It is recommended to remove it in production development if you use SSL
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); // Recommended to remove it in production development if you use SSL
+    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0); // Recommended to remove it in production development if you use SSL
     curl_setopt($ch, CURLOPT_TIMEOUT, 5);
     $response = curl_exec($ch);
     echo $response;
