@@ -112,7 +112,7 @@ The app imposes certain restrictions in order to use resources efficiently, moni
 
 ## Responses
 
-#### 200 OK
+### 200 OK
 
 Successful request. The message has been sent.
 
@@ -124,7 +124,7 @@ Successful request. The message has been sent.
 }
 ```
 
-#### 400 Bad request
+### 400 Bad request
 
 The message could not be sent for any reason `response->status`:
 
@@ -147,3 +147,7 @@ The message could not be sent for any reason `response->status`:
 #### 500 Internal Server Error
 
 Internal server error please try again later.
+
+## Authors
+
+All rights reserved to [34devs.ru](https://34devs.ru/ "34devs.ru").
