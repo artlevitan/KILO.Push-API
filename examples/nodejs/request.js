@@ -14,7 +14,6 @@ var options = {
         "secret": "SECRET_KEY", // Sender: Channel Secret Key
         "message": "Hello world!", // Your message
         "url": "https://34devs.ru/", // Hyperlink (http:// or https://)
-        "important": "1", // Add push notification: 0 - no, 1 - yes
     })
 
 };

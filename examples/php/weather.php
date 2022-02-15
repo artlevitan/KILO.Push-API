@@ -60,7 +60,6 @@ foreach ($recipients as $recipient) {
         "secret" => "SECRET_KEY", // Sender: Channel Secret Key
         "message"  => "The weather is in {$cityName} now. Temperature {$weatherData["temp"]} °C, Atmospheric pressure {$weatherData["pressure"]}hPa, Humidity {$weatherData["humidity"]}%", // Your message
         "url" => "https://openweathermap.org/city/{$cityID}", // Hyperlink (http:// or https://)
-        "important" => "1", // Add push notification: 0 - no, 1 - yes
     ];
     $fields = json_encode($request_body);
     curl_setopt($ch, CURLOPT_URL, 'https://push.kilo.chat/v1/messages/send');

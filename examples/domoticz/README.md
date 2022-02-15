@@ -18,12 +18,10 @@ FIELD2 `secret` Sender: Channel Secret Key
 
 FIELD3 `url` Hyperlink (http:// or https://)
 
-FIELD4 `important` Add push notification: 0 - no, 1 - yes
-
 TO `to` Recipient: User Token
 
 URL/Action `https://push.kilo.chat/v1/messages/send`
 
-POST Data `to=#TO&token=#FIELD1&secret=#FIELD2&url=#FIELD3&important=#FIELD4&message=#SUBJECT #MESSAGE`
+POST Data `to=#TO&token=#FIELD1&secret=#FIELD2&url=#FIELD3&message=#SUBJECT #MESSAGE`
 
 POST Content-Type `application/x-www-form-urlencoded`

@@ -1,1 +1,1 @@
-curl -X POST -d 'to=USER_TOKEN&token=CHANNEL_TOKEN&secret=SECRET_KEY&message=Hello+world&important=1' https://push.kilo.chat/v1/messages/send
+curl -X POST -d 'to=USER_TOKEN&token=CHANNEL_TOKEN&secret=SECRET_KEY&message=Hello+world' https://push.kilo.chat/v1/messages/send

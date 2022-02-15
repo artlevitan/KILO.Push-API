@@ -39,7 +39,6 @@ foreach ($selectedRecipients as $selectedRecipient) {
         "secret" => "SECRET_KEY", // Sender: Channel Secret Key
         "message"  => "You are the winner!", // Your message
         "url" => "https://34devs.ru/", // Hyperlink (http:// or https://)
-        "important" => "1", // Add push notification: 0 - no, 1 - yes
     ];
     $fields = json_encode($request_body);
     curl_setopt($ch, CURLOPT_URL, 'https://push.kilo.chat/v1/messages/send');
