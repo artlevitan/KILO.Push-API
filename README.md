@@ -96,14 +96,14 @@ The app imposes certain restrictions in order to use resources efficiently, moni
 
 **POST** an HTTPS request to <https://push.kilo.chat/v1/messages/send> with the following parameters:
 
-| Key       | Required | Type   | Decription                             |
-| --------- | -------- | ------ | -------------------------------------- |
-| to        | yes      | string | Recipient: User Token                  |
-| token     | yes      | string | Sender: Channel Token                  |
-| secret    | yes      | string | Sender: Channel Secret Key             |
-| message   | yes      | string | Your message                           |
-| url       | no       | string | Hyperlink (http:// or https://)        |
-| important | no       | string | Add push notification: 0 - no, 1 - yes |
+| Key       | Required | Type   | Decription                                 |
+| --------- | -------- | ------ | ------------------------------------------ |
+| to        | yes      | string | Recipient: User Token                      |
+| token     | yes      | string | Sender: Channel Token                      |
+| secret    | yes      | string | Sender: Channel Secret Key                 |
+| message   | yes      | string | Your message                               |
+| url       | no       | string | Hyperlink (http:// or https://)            |
+| silent    | no       | string | Disable push notification: 0 - no, 1 - yes |
 
 ### HTTP Request Headers
 
