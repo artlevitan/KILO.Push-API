@@ -15,17 +15,17 @@ $cityName = 'London'; // City name, state code and country code divided by comma
 $cityID = ''; // City ID
 $weatherData = [
     "temp" => 0,
-    "feels_like" =>  0,
-    "temp_min" =>  0,
-    "temp_max" =>  0,
-    "pressure" =>  0,
-    "humidity" =>  0,
+    "feels_like" => 0,
+    "temp_min" => 0,
+    "temp_max" => 0,
+    "pressure" => 0,
+    "humidity" => 0,
 ];
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, "https://api.openweathermap.org/data/2.5/weather?q={$cityName}&appid={$weather_API_KEY}"); // https://openweathermap.org/current
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0); // Recommended to remove it in production development if you use SSL
-curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0); // Recommended to remove it in production development if you use SSL
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0); // Recommended removing it in production development if you use SSL
+curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0); // Recommended removing it in production development if you use SSL
 $json = curl_exec($ch);
 curl_close($ch);
 $result = $json !== false ? json_decode($json) : null;
@@ -58,7 +58,7 @@ foreach ($recipients as $recipient) {
         "to" => $recipient, // Recipient: User Token
         "token" => "CHANNEL_TOKEN", // Sender: Channel Token
         "secret" => "SECRET_KEY", // Sender: Channel Secret Key
-        "message"  => "The weather is in {$cityName} now. Temperature {$weatherData["temp"]} °C, Atmospheric pressure {$weatherData["pressure"]}hPa, Humidity {$weatherData["humidity"]}%", // Your message
+        "message" => "The weather is in {$cityName} now. Temperature {$weatherData["temp"]} °C, Atmospheric pressure {$weatherData["pressure"]}hPa, Humidity {$weatherData["humidity"]}%", // Your message
         "url" => "https://openweathermap.org/city/{$cityID}", // Hyperlink (http:// or https://)
     ];
     $fields = json_encode($request_body);
@@ -67,8 +67,8 @@ foreach ($recipients as $recipient) {
     curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type:application/json']);
     curl_setopt($ch, CURLOPT_POSTFIELDS, $fields);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); // Recommended to remove it in production development if you use SSL
-    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0); // Recommended to remove it in production development if you use SSL
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); // Recommended removing it in production development if you use SSL
+    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0); // Recommended removing it in production development if you use SSL
     curl_setopt($ch, CURLOPT_TIMEOUT, 5);
     $response = curl_exec($ch);
     echo $response;

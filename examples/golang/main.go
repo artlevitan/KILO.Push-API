@@ -6,7 +6,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
+	"io"
 	"net/http"
 	"strings"
 )
@@ -24,7 +24,11 @@ func main() {
 		"url":     "https://34devs.ru/", // Hyperlink (http:// or https://)
 	}
 
-	bytes, _ := json.Marshal(data)
+	bytes, err := json.Marshal(data)
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
 	payload := string(bytes)
 
 	client := &http.Client{}
@@ -40,9 +44,15 @@ func main() {
 		fmt.Println(err)
 		return
 	}
-	defer res.Body.Close()
+	defer func(Body io.ReadCloser) {
+		err := Body.Close()
+		if err != nil {
+			fmt.Println(err)
+			return
+		}
+	}(res.Body)
 
-	body, err := ioutil.ReadAll(res.Body)
+	body, err := io.ReadAll(res.Body)
 	if err != nil {
 		fmt.Println(err)
 		return
