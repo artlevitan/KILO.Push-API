@@ -150,4 +150,4 @@ Internal server error please try again later.
 
 ## Authors
 
-All rights reserved to [34devs.ru](https://34devs.ru/ "34devs.ru").
+All rights reserved to [34devs.ru](https://www.34devs.ru/ "34devs.ru").

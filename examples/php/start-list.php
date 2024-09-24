@@ -33,7 +33,7 @@ foreach ($recipients as $recipient) {
         "token" => "CHANNEL_TOKEN", // Sender: Channel Token
         "secret" => "SECRET_KEY", // Sender: Channel Secret Key
         "message"  => "Your position is {$cnt}", // Your message
-        "url" => "https://34devs.ru/", // Hyperlink (http:// or https://)
+        "url" => "https://www.34devs.ru/", // Hyperlink (http:// or https://)
     ];
     $fields = json_encode($request_body);
     curl_setopt($ch, CURLOPT_URL, 'https://push.kilo.chat/v1/messages/send');

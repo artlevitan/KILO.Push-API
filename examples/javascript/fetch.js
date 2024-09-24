@@ -9,7 +9,7 @@ var raw = JSON.stringify({
     "token": "CHANNEL_TOKEN", // Sender: Channel Token
     "secret": "SECRET_KEY", // Sender: Channel Secret Key
     "message": "Hello world!", // Your message
-    "url": "https://34devs.ru/", // Hyperlink (http:// or https://)
+    "url": "https://www.34devs.ru/", // Hyperlink (http:// or https://)
 });
 
 var requestOptions = {

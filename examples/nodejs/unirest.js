@@ -11,7 +11,7 @@ var req = unirest('POST', 'https://push.kilo.chat/v1/messages/send')
         "token": "CHANNEL_TOKEN", // Sender: Channel Token
         "secret": "SECRET_KEY", // Sender: Channel Secret Key
         "message": "Hello world!", // Your message
-        "url": "https://34devs.ru/", // Hyperlink (http:// or https://)
+        "url": "https://www.34devs.ru/", // Hyperlink (http:// or https://)
     }))
     .end(function (res) {
         if (res.error) throw new Error(res.error);
